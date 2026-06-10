@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Sobre | Blog MAXML</title>
+
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+  </head>
+  <body
+    class="flex flex-col bg-slate-100 flex items-center justify-center min-h-screen text-white"
+  >
+    <header
+      class="flex items-center justify-between px-4 h-16 w-full bg-black text-white shadow-sm md:px-24 md:h-24 border-b-2 border-gray-900"
+    >
+      <div class="flex gap-2 items-center">
+        <img src="./assets/logo.png" alt="logo da MAXML" class="h-16 w-16" />
+        <div>
+          <h1 class="text-lg font-bold tracking-wide text-white">
+            MA<span class="text-blue-400/90"
+              >X<span class="text-white">M</span>L</span
+            >
+          </h1>
+          <h2 class="text-xs text-zinc-300">Blog de Estudos</h2>
+        </div>
+      </div>
+
+      <nav class="flex items-center gap-6">
+        <a
+          href="index.html"
+          class="flex items-center gap-1.5 text-sm font-medium text-zinc-300 hover:text-blue-600 transition-colors"
+          >Home</a
+        >
+        <a
+          href="index.html#artigos"
+          class="flex items-center gap-1.5 text-sm font-medium text-zinc-300 hover:text-blue-600 transition-colors"
+          >Artigos</a
+        >
+        <a
+          href="about.html"
+          class="flex items-center gap-1.5 text-sm font-medium text-blue-400 transition-colors"
+          >Sobre</a
+        >
+      </nav>
+    </header>
+
+    <main class="bg-black w-full flex-1 px-4 py-12 md:px-8">
+      <div class="max-w-5xl mx-auto">
+        
+        <section class="text-center mb-12 max-w-2xl mx-auto">
+          <div class="flex items-center gap-4 justify-center flex-wrap">
+            <h2 class="text-3xl font-extrabold tracking-tight text-white md:text-4xl">
+              Por trás do código
+            </h2>
+            <img
+              src="./assets/dev_gif.webp"
+              alt="Animação dev"
+              class="h-8 rounded-lg shadow-md"
+            />
+          </div>
+          <p class="mt-4 text-base text-zinc-400 leading-relaxed">
+            Conheça a história do <span class="text-white font-semibold">MAXML</span> e quem está pilotando os bastidores deste projeto.
+          </p>
+        </section>
+
+        <div class="grid gap-8 md:grid-cols-3">
+          
+          <section class="md:col-span-2 space-y-6">
+            <div class="bg-zinc-900 rounded-xl border border-zinc-800 p-6 md:p-8">
+              <h3 class="text-xl font-bold text-zinc-100 mb-4 flex items-center gap-2">
+                <i class="ph-light ph-user text-blue-400"></i> Quem é Henrique Máximo?
+              </h3>
+              <div class="text-zinc-400 space-y-4 text-sm md:text-base leading-relaxed">
+                <p>
+                  Sou um desenvolvedor focado no ecossistema JavaScript e TypeScript, com forte inclinação para soluções robustas de backend e arquitetura de software limpa. 
+                </p>
+                <p>
+                  O <strong class="text-white font-medium">MAXML</strong> nasceu da necessidade real de criar um "caderno de laboratório". Acredito que a melhor forma de consolidar conceitos complexos — como SOLID, Clean Architecture, TDD ou gerenciamento de estado — é tentando explicá-los de forma simples e direta.
+                </p>
+                <p>
+                  Atualmente, divido meu tempo construindo aplicações focadas em resolver problemas do mundo real (como sistemas financeiros e de gestão) e desbravando novos desafios técnicos a cada linha de código.
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-zinc-900 rounded-xl border border-zinc-800 p-6 md:p-8">
+              <h3 class="text-xl font-bold text-zinc-100 mb-4 flex items-center gap-2">
+                <i class="ph-light ph-coffee text-blue-400"></i> Filosofia de Trabalho
+              </h3>
+              <p class="text-zinc-400 text-sm md:text-base leading-relaxed">
+                Código legível, testes automatizados e café sem açúcar. Prefiro entender os fundamentos profundamente antes de pular para o próximo framework da moda. Este blog é o reflexo dessa busca constante pela evolução técnica.
+              </p>
+            </div>
+          </section>
+
+          <aside class="space-y-6">
+            
+            <div class="bg-zinc-900 rounded-xl border border-zinc-800 p-6">
+              <h3 class="text-lg font-bold text-zinc-100 mb-4 flex items-center gap-2">
+                <i class="ph-light ph-cpu text-purple-400"></i> Core Stack
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                <span class="bg-zinc-950 px-2.5 py-1 text-xs rounded-md border border-zinc-800 text-zinc-300">Node.js</span>
+                <span class="bg-zinc-950 px-2.5 py-1 text-xs rounded-md border border-zinc-800 text-zinc-300">TypeScript</span>
+                <span class="bg-zinc-950 px-2.5 py-1 text-xs rounded-md border border-zinc-800 text-zinc-300">React</span>
+                <span class="bg-zinc-950 px-2.5 py-1 text-xs rounded-md border border-zinc-800 text-zinc-300">Fastify</span>
+                <span class="bg-zinc-950 px-2.5 py-1 text-xs rounded-md border border-zinc-800 text-zinc-300">Laravel</span>
+                <span class="bg-zinc-950 px-2.5 py-1 text-xs rounded-md border border-zinc-800 text-zinc-300">PostgreSQL</span>
+                <span class="bg-zinc-950 px-2.5 py-1 text-xs rounded-md border border-zinc-800 text-zinc-300">Tailwind CSS</span>
+              </div>
+            </div>
+
+            <div class="bg-zinc-900 rounded-xl border border-zinc-800 p-6">
+              <h3 class="text-lg font-bold text-zinc-100 mb-4 flex items-center gap-2">
+                <i class="ph-light ph-link text-emerald-400"></i> Onde me encontrar
+              </h3>
+              <ul class="space-y-3 text-sm">
+                <li>
+                  <a href="https://www.github.com/henrry-maximo" target="_blank" class="flex items-center gap-2 text-zinc-400 hover:text-white transition-colors group">
+                    <i class="ph-light ph-github-logo text-lg group-hover:text-purple-400"></i> GitHub
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/henrique-maximo/" target="_blank" class="flex items-center gap-2 text-zinc-400 hover:text-white transition-colors group">
+                    <i class="ph-light ph-linkedin-logo text-lg group-hover:text-blue-400"></i> LinkedIn
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </aside>
+        </div>
+
+      </div>
+    </main>
+
+    <footer
+      class="flex items-center justify-between px-8 w-full py-4 bg-black shadow-sm"
+    >
+      <span class="text-xs text-zinc-400">
+        Desenvolvido com amor por
+        <a
+          href="https://www.github.com/henrry-maximo"
+          target="_blank"
+          class="text-zinc-600 hover:text-purple-400 transition-colors"
+          >Henrique Maximo</a
+        >
+      </span>
+
+      <span class="text-xs text-zinc-600">MAXML, 2026</span>
+    </footer>
+  </body>
+</html>

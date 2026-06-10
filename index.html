@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Blog MAXML</title>
+
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+  </head>
+  <body
+    class="flex flex-col bg-slate-100 flex items-center justify-center min-h-screen text-white"
+  >
+    <header
+      class="flex items-center justify-between px-4 h-16 w-full bg-black text-white shadow-sm md:px-24 md:h-24 border-b-2 border-gray-900"
+    >
+      <div class="flex gap-2 items-center">
+        <img src="./assets/logo.png" alt="logo da MAXML" class="h-16 w-16" />
+        <div>
+          <h1 class="text-lg font-bold tracking-wide text-white">
+            MA<span class="text-blue-400/90"
+              >X<span class="text-white">M</span>L</span
+            >
+          </h1>
+          <h2 class="text-xs text-zinc-300">Blog de Estudos</h2>
+        </div>
+      </div>
+
+      <nav class="flex items-center gap-6">
+        <a
+          href="./index.html"
+          class="flex items-center gap-1.5 text-sm font-medium text-zinc-300 hover:text-blue-600 transition-colors"
+          >Home</a
+        >
+        <a
+          href="./articles.html"
+          class="flex items-center gap-1.5 text-sm font-medium text-zinc-300 hover:text-blue-600 transition-colors"
+          >Artigos</a
+        >
+        <a
+          href="./about.html"
+          class="flex items-center gap-1.5 text-sm font-medium text-zinc-300 hover:text-blue-600 transition-colors"
+          >Sobre</a
+        >
+      </nav>
+    </header>
+
+    <main class="bg-black w-full flex-1 px-4 py-12 md:px-8">
+      <div class="max-w-5xl mx-auto">
+        <section class="text-center mb-16 max-w-2xl mx-auto">
+          <div class="flex items-center gap-8 justify-center">
+            <h2
+              class="text-3xl font-extrabold tracking-tight text-white md:text-4xl"
+            >
+              Estudos de um Dev qualquer
+            </h2>
+            <img
+              src="./assets/dev_gif.webp"
+              alt="Descrição da animação"
+              class="h-8 rounded-lg shadow-md"
+            />
+          </div>
+          <p class="mt-4 text-base text-zinc-400 leading-relaxed">
+            Bem-vindo ao
+            <span class="font-semibold text-white">MAXML</span>. Um espaço
+            focado em documentar aprendizados, arquitetura de software, desafios
+            de código e a jornada nos bastidores do desenvolvimento.
+          </p>
+        </section>
+
+        <section>
+          <h3
+            class="text-xl font-bold text-zinc-100 mb-6 border-b border-zinc-800 pb-2"
+          >
+            Artigos Recentes
+          </h3>
+
+          <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- <article
+              class="flex flex-col bg-zinc-900 rounded-xl border border-zinc-800 shadow-sm hover:border-zinc-700 hover:-translate-y-0.5 transition-all duration-250 overflow-hidden group"
+            >
+              <div class="p-5 flex-1 flex flex-col">
+                <div
+                  class="flex gap-2 items-center text-xs font-semibold text-blue-400 mb-3"
+                >
+                  <span
+                    class="bg-blue-950/50 px-2 py-0.5 rounded-sm border border-blue-900/30"
+                    >Backend</span
+                  >
+                  <span class="text-zinc-500 font-normal">10 Jun 2026</span>
+                </div>
+                <h4
+                  class="text-base font-bold text-white line-clamp-2 group-hover:text-blue-400 transition-colors"
+                >
+                  <a href="#"
+                    >Desmistificando o Clean Architecture no Node.js</a
+                  >
+                </h4>
+                <p class="mt-2 text-sm text-zinc-400 line-clamp-3 flex-1">
+                  Como estruturar projetos escaláveis separando as regras de
+                  negócio dos detalhes de infraestrutura.
+                </p>
+                <div
+                  class="mt-4 pt-3 border-t border-zinc-800 flex justify-between items-center text-xs font-medium text-zinc-500"
+                >
+                  <span class="flex items-center justify-center gap-2"
+                    ><i class="ph-light ph-clock text-base text-zinc-500"></i> 5
+                    min de leitura</span
+                  >
+                  <span class="text-blue-400 group-hover:underline"
+                    >Ler mais →</span
+                  >
+                </div>
+              </div>
+            </article> -->
+
+            <article
+              class="flex flex-col bg-zinc-900 rounded-xl border border-zinc-800 shadow-sm hover:border-zinc-700 hover:-translate-y-0.5 transition-all duration-250 overflow-hidden group"
+            >
+              <div class="p-5 flex-1 flex flex-col">
+                <div
+                  class="flex gap-2 items-center text-xs font-semibold text-purple-400 mb-3"
+                >
+                  <span
+                    class="bg-purple-950/50 px-2 py-0.5 rounded-sm border border-purple-900/30"
+                    >Frontend</span
+                  >
+                  <span class="text-zinc-500 font-normal">05 Jun 2026</span>
+                </div>
+                <h4
+                  class="text-base font-bold text-white line-clamp-2 group-hover:text-purple-400 transition-colors"
+                >
+                  <a href="./pages/why_I_chose_to_start_my_blog_with_pure_HTML.html">Por que escolhi começar meu blog com HTML puro</a>
+                </h4>
+                <p class="mt-2 text-sm text-zinc-400 line-clamp-3 flex-1">
+                  O foco no conteúdo e na simplicidade antes de escalar a
+                  arquitetura para o ecossistema fullstack.
+                </p>
+                <div
+                  class="mt-4 pt-3 border-t border-zinc-800 flex justify-between items-center text-xs font-medium text-zinc-500"
+                >
+                  <span class="flex items-center justify-center gap-2"><i class="ph-light ph-clock text-base text-zinc-500"></i> 3 min de leitura</span>
+                  <span class="text-purple-400 group-hover:underline"
+                    >Ler mais →</span
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- <article
+              class="flex flex-col bg-zinc-900 rounded-xl border border-zinc-800 shadow-sm hover:border-zinc-700 hover:-translate-y-0.5 transition-all duration-250 overflow-hidden group"
+            >
+              <div class="p-5 flex-1 flex flex-col">
+                <div
+                  class="flex gap-2 items-center text-xs font-semibold text-emerald-400 mb-3"
+                >
+                  <span
+                    class="bg-emerald-950/50 px-2 py-0.5 rounded-sm border border-emerald-900/30"
+                    >Projetos</span
+                  >
+                  <span class="text-zinc-500 font-normal">28 Mai 2026</span>
+                </div>
+                <h4
+                  class="text-base font-bold text-white line-clamp-2 group-hover:text-emerald-400 transition-colors"
+                >
+                  <a href="#"
+                    >Evoluindo aplicações: Do escopo à primeira entrega</a
+                  >
+                </h4>
+                <p class="mt-2 text-sm text-zinc-400 line-clamp-3 flex-1">
+                  Insights sobre gerenciamento de estado, consumo de APIs e como
+                  priorizar features em projetos pessoais.
+                </p>
+                <div
+                  class="mt-4 pt-3 border-t border-zinc-800 flex justify-between items-center text-xs font-medium text-zinc-500"
+                >
+                  <span class="flex items-center justify-center gap-2"><i class="ph-light ph-clock text-base text-zinc-500"></i> 4 min de leitura</span>
+                  <span class="text-emerald-400 group-hover:underline"
+                    >Ler mais →</span
+                  >
+                </div>
+              </div>
+            </article> -->
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer
+      class="flex items-center justify-between px-8 w-full py-4 bg-black shadow-sm"
+    >
+      <span class="text-xs text-zinc-400">
+        Desenvolvido com amor por
+        <a
+          href="https://www.github.com/henrry-maximo"
+          target="_blank"
+          class="text-zinc-600 hover:text-purple-400 transition-colors"
+          >Henrique Maximo</a
+        >
+      </span>
+
+      <span class="text-xs text-zinc-600">MAXML, 2026</span>
+    </footer>
+  </body>
+</html>

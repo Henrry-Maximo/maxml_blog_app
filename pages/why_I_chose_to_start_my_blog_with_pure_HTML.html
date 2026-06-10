@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Por que escolhi começar meu blog com HTML puro | Blog MAXML</title>
+
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+  </head>
+  <body
+    class="flex flex-col bg-slate-100 flex items-center justify-center min-h-screen text-white"
+  >
+    <header
+      class="flex items-center justify-between px-4 h-16 w-full bg-black text-white shadow-sm md:px-24 md:h-24 border-b-2 border-gray-900"
+    >
+      <div class="flex gap-2 items-center justify-center">
+        <img src="../assets/logo.png" alt="logo da MAXML" class="h-16 w-16" />
+        <div>
+          <h1 class="text-lg font-bold tracking-wide text-white">
+            MA<span class="text-blue-400/90"
+              >X<span class="text-white">M</span>L</span
+            >
+          </h1>
+          <h2 class="text-xs text-zinc-300">Blog de Estudos</h2>
+        </div>
+      </div>
+
+      <nav class="flex items-center gap-6">
+        <a
+          href="../index.html"
+          class="flex items-center gap-1.5 text-sm font-medium text-zinc-300 hover:text-blue-600 transition-colors"
+          >Home</a
+        >
+        <a
+          href="../articles.html"
+          class="flex items-center gap-1.5 text-sm font-medium text-blue-400 transition-colors"
+          >Artigos</a
+        >
+        <a
+          href="../about.html"
+          class="flex items-center gap-1.5 text-sm font-medium text-zinc-300 hover:text-blue-600 transition-colors"
+          >Sobre</a
+        >
+      </nav>
+    </header>
+
+    <main class="bg-black w-full flex-1 px-4 py-12 md:px-8">
+      <div class="max-w-3xl mx-auto">
+
+        <div class="mb-8">
+          <a href="../articles.html" class="inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-purple-400 transition-colors group">
+            <i class="ph-light ph-arrow-left transition-transform group-hover:-translate-x-1"></i> Voltar para artigos
+          </a>
+        </div>
+
+        <header class="mb-8 border-b border-zinc-800 pb-8">
+          <div class="flex gap-2 items-center text-xs font-semibold text-purple-400 mb-3">
+            <span class="bg-purple-950/50 px-2 py-0.5 rounded-sm border border-purple-900/30">Frontend</span>
+            <span class="text-zinc-500 font-normal">05 Jun 2026</span>
+            <span class="text-zinc-600">•</span>
+            <span class="text-zinc-500 font-normal flex items-center gap-1">
+              <i class="ph-light ph-clock"></i> 3 min de leitura
+            </span>
+          </div>
+
+          <h1 class="text-3xl font-extrabold tracking-tight text-white md:text-4xl leading-tight">
+            Por que escolhi começar meu blog com HTML puro
+          </h1>
+          
+          <p class="mt-4 text-lg text-zinc-400 leading-relaxed font-light">
+            O foco no conteúdo, a busca pela simplicidade extrema e o perigo de superestruturar projetos antes da hora.
+          </p>
+        </header>
+
+        <article class="text-zinc-300 space-y-6 text-base md:text-lg leading-relaxed font-normal">
+          <p>
+            Como desenvolvedores, temos uma mania quase incontrolável de complicar as coisas. Antes mesmo de escrever a primeira linha de conteúdo de um projeto pessoal, nossa mente é inundada por decisões arquiteturais: <em>"Devo usar Next.js ou Nuxt?", "Qual CMS headless vai gerenciar meus posts?", "Como estruturar os Server Components?"</em>.
+          </p>
+
+          <p>
+            Quando decidi criar o <strong class="text-white">MAXML</strong>, olhei para esse abismo de decisões e decidi dar um passo para trás. Escolhi a ferramenta mais primitiva, previsível e duradoura da web: o bom e velho <strong>HTML puro</strong> (reforçado pelo Tailwind CSS para agilizar a estilização).
+          </p>
+
+          <h2 class="text-xl font-bold text-white pt-4 tracking-tight flex items-center gap-2 md:text-2xl">
+            <span class="text-purple-400">#</span> 1. Foco absoluto no que importa
+          </h2>
+          <p>
+            O objetivo principal de um blog de estudos é... <strong>estudar e documentar</strong>. Ao eliminar build steps, bundlers, hidratação de framework e dependências do `npm` que quebram a cada seis meses, reduzi a fricção entre ter uma ideia e publicá-la a zero. Se quero escrever um artigo, abro um arquivo `.html`, crio a estrutura e escrevo. 
+          </p>
+
+          <h2 class="text-xl font-bold text-white pt-4 tracking-tight flex items-center gap-2 md:text-2xl">
+            <span class="text-purple-400">#</span> 2. Performance nativa e imbatível
+          </h2>
+          <p>
+            Não existe framework no mundo que seja mais rápido do que entregar um arquivo estático puro que o navegador lê nativamente desde os anos 90. O tempo de carregamento é instantâneo, o gasto de dados é mínimo e o SEO é limpo por padrão. 
+          </p>
+
+          <blockquote class="bg-zinc-900 border-l-4 border-purple-500 rounded-r-lg p-4 my-6 text-zinc-400 text-sm md:text-base italic">
+            "A melhor otimização de performance é não ter o que otimizar."
+          </blockquote>
+
+          <h2 class="text-xl font-bold text-white pt-4 tracking-tight flex items-center gap-2 md:text-2xl">
+            <span class="text-purple-400">#</span> 3. Premature Optimization é um erro
+          </h2>
+          <p>
+            Engenharia de software de verdade envolve resolver problemas que você <em>tem</em>, não problemas que você <em>acha que vai ter</em>. No início, um blog não precisa de um banco de dados dinâmico ou de uma esteira complexa de geração estática (SSG). Quando o volume de posts crescer a ponto de dificultar a manutenção manual, aí sim farei a refatoração para um gerador estático ou uma API robusta.
+          </p>
+          <p>
+            Até lá, cada linha de HTML digitada serve para reforçar os fundamentos da nossa profissão.
+          </p>
+
+          <div class="mt-12 p-6 bg-zinc-900/50 rounded-xl border border-zinc-800">
+            <h3 class="text-sm font-semibold uppercase tracking-wider text-zinc-400 mb-2">Gostou da leitura?</h3>
+            <p class="text-sm text-zinc-400">
+              Acompanhe meus próximos laboratórios de código e anotações de arquitetura na aba de <a href="articles.html" class="text-blue-400 hover:underline">Artigos</a>.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </main>
+
+    <footer
+      class="flex items-center justify-between px-8 w-full py-4 bg-black shadow-sm border-t border-gray-900"
+    >
+      <span class="text-xs text-zinc-400">
+        Desenvolvido com amor por
+        <a
+          href="https://www.github.com/henrry-maximo"
+          target="_blank"
+          class="text-zinc-600 hover:text-purple-400 transition-colors"
+          >Henrique Maximo</a
+        >
+      </span>
+
+      <span class="text-xs text-zinc-600">MAXML, 2026</span>
+    </footer>
+  </body>
+</html>
