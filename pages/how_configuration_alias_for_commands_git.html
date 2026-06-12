@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Como configurar "alias" para os comandos do git | Blog MAXML</title>
+
+  <link rel="icon" type="image/png" href="/assets/favicon.png" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+</head>
+
+<body class="flex flex-col bg-black min-h-screen text-white">
+  <header
+    class="flex items-center justify-between px-4 h-16 w-full bg-black text-white shadow-sm md:px-12 md:h-20 border-b border-zinc-900 sticky top-0 z-50">
+    <div class="flex gap-2 items-center justify-center">
+      <img src="../assets/logo.png" alt="logo da MAXML" class="h-10 w-10 md:h-14 md:w-14" />
+      <div>
+        <h1 class="text-base md:text-lg font-bold tracking-wide text-white">
+          MA<span class="text-blue-400/90">X<span class="text-white">M</span>L</span>
+        </h1>
+        <h2 class="text-xs text-zinc-300">Blog de Estudos</h2>
+      </div>
+    </div>
+
+    <nav class="hidden md:flex items-center gap-6">
+      <a href="../index.html" class="text-sm font-medium text-zinc-300 hover:text-blue-400 transition-colors">Home</a>
+      <a href="../articles.html" class="text-sm font-medium text-blue-400 transition-colors">Artigos</a>
+      <a href="../about.html" class="text-sm font-medium text-zinc-300 hover:text-blue-400 transition-colors">Sobre</a>
+    </nav>
+
+    <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Menu">
+      <span class="block w-5 h-0.5 bg-zinc-300"></span>
+      <span class="block w-5 h-0.5 bg-zinc-300"></span>
+      <span class="block w-5 h-0.5 bg-zinc-300"></span>
+    </button>
+  </header>
+
+  <div id="mobile-menu" class="hidden bg-zinc-950 border-b border-zinc-900 px-4 py-4 flex flex-col gap-4 md:hidden">
+    <a href="../index.html" class="text-sm font-medium text-zinc-300 hover:text-blue-400 transition-colors">Home</a>
+    <a href="../articles.html" class="text-sm font-medium text-blue-400 transition-colors">Artigos</a>
+    <a href="../about.html" class="text-sm font-medium text-zinc-300 hover:text-blue-400 transition-colors">Sobre</a>
+  </div>
+
+  <main class="bg-black w-full flex-1 px-4 py-12 md:px-8">
+    <div class="max-w-3xl mx-auto">
+      <div class="mb-8">
+        <a href="../articles.html"
+          class="inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-emerald-400 transition-colors group">
+          <i class="ph-light ph-arrow-left transition-transform group-hover:-translate-x-1"></i>
+          Voltar para artigos
+        </a>
+      </div>
+
+      <header class="mb-8 border-b border-zinc-800 pb-8">
+        <div class="flex gap-2 items-center text-xs font-semibold text-emerald-400 mb-3">
+          <span class="bg-emerald-950/50 px-2 py-0.5 rounded-sm border border-emerald-900/30">Projetos</span>
+          <span class="text-zinc-500 font-normal">05 Jun 2026</span>
+          <span class="text-zinc-600">•</span>
+          <span class="text-zinc-500 font-normal flex items-center gap-1">
+            <i class="ph-light ph-clock"></i> 10 min de leitura
+          </span>
+        </div>
+
+        <h1 class="text-3xl font-extrabold tracking-tight text-white md:text-4xl leading-tight">
+          Como configurar "alias" (atalhos) para comandos git, simplificando o fluxo de
+          desenvolvimento
+        </h1>
+
+        <p class="mt-4 text-lg text-zinc-400 leading-relaxed font-light">
+          A agilidade de comandos abreviados, o simples abre portas e o risco de somente aprender o que precisa para o mercado.
+        </p>
+      </header>
+
+      <article class="text-zinc-300 space-y-6 text-sm md:text-base leading-relaxed font-normal">
+        <p>
+          Sempre que pensamos em agilidade e rapidez no fluxo de
+          desenvolvimento, optamos por utilizar ferramentas que possuem
+          diversas abstrações, sendo o objetivo principal não perder tempo com
+          funcionalidades que não envolvam a regra de negócio. Ou seja,
+          <em>"Por que reinventar a roda se simplesmente podemos utilizá-la?",
+            "Por que criar método de autenticação do zero", "Por que
+            implementar rotas manual sendo que o framework da moda já
+            faz?"</em>.
+        </p>
+
+        <p>
+          Esses questionamentos são pertinentes e não estão errados, porém
+          demonstra um ponto crítico.<strong class="text-white"></strong>
+          Como podemos evoluir a tecnologia se não sabemos como funciona por
+          debaixo dos panos? </strong>Me questiono periodicamente sobre isto, pois vejo pessoas
+          acreditando piamente que não precisam estudar ou entender a
+          abstração, elas só precisam usar, simples assim. Sabe?... eu penso
+          seriamente que para as coisas evoluírem, elas precisam ser
+          <strong>dissecadas</strong>, <strong>manipuladas</strong> e
+          <strong>observadas</strong> milimetricamente.
+        </p>
+
+        <h2 class="text-xl font-bold text-white pt-4 tracking-tight flex items-center gap-2 md:text-2xl">
+          <span class="text-emerald-400">#</span> 1. O ponto crítico
+        </h2>
+        <p>
+          O objetivo principal de minha análise é simples...
+          <strong>estudar o cór, as entrelinhas para obter as nuances</strong>. Se você é como eu, não aceita não
+          entender, queremos o máximo do
+          conhecimento, queremos destrinchar profundamente o tema. "O que nós
+          move?", você pode perguntar?... Eu lhe respondo: simplesmente
+          fazemos com afinco porque gostamos. A tecnologia, o mercado, o
+          cenário atual... todos eles precisam da gente.
+        </p>
+
+        <h2 class="text-xl font-bold text-white pt-4 tracking-tight flex items-center gap-2 md:text-2xl">
+          <span class="text-emerald-400">#</span> 2. Como implementar?
+          Substituindo "git status" por "git s"
+        </h2>
+        <p>
+          O comando a seguir visa abrir o arquivo de configuração do GIT, por
+          isso passamos a flag "edit", já "global" indica que iremos aplicar
+          para qualquer projeto pertencente ao usuário logado. O GIT possuí
+          três modalidades: global, local e system. O "local" serve para o
+          projeto aberto no momento, então recomendo que utilize o terminal do
+          VSCode para configurar. O system serve para todos os usuários do
+          sistema. Pense que nem todos da sua equipe querem utilizar os mesmos
+          atalhos que você. Aqui utilizaremos o "global". Digite o comando a
+          seguir em seu terminal.
+        </p>
+
+        <blockquote
+          class="bg-zinc-900 border-l-4 border-emerald-500 rounded-r-lg p-4 my-6 text-zinc-400 text-sm md:text-base italic">
+          git confg --global --edit
+        </blockquote>
+
+        <p>
+          O terminal mostrará o editor Vim, então pressione a tecla dois
+          pontos e solte, e em seguida coloque a letra "q". O comando irá
+          fechar o editor.
+        </p>
+
+        <blockquote
+          class="bg-zinc-900 border-l-4 border-emerald-500 rounded-r-lg p-4 my-6 text-zinc-400 text-sm md:text-base italic">
+          :q
+        </blockquote>
+
+        <p>
+          Para abrir o arquivo de configurações com o VSCode, utilize o
+          comando abaixo. Ele edita diretamente o arquivo do git, trocando o editor. Em seguida, use o comando
+          novamente.
+        </p>
+
+        <blockquote
+          class="bg-zinc-900 border-l-4 border-emerald-500 rounded-r-lg p-4 my-6 text-zinc-400 text-sm md:text-base italic">
+          git config --global core.editor code
+        </blockquote>
+
+        <blockquote
+          class="bg-zinc-900 border-l-4 border-emerald-500 rounded-r-lg p-4 my-6 text-zinc-400 text-sm md:text-base italic">
+          git config --global --edit
+        </blockquote>
+
+        <p>A estrutura a seguir será exibida para você:</p>
+
+        <div class="my-6 bg-zinc-950 rounded-xl border border-zinc-800/80 overflow-hidden shadow-inner">
+          <div
+            class="flex items-center justify-between px-4 py-2.5 bg-zinc-900 border-b border-zinc-800 text-xs text-zinc-500 font-mono select-none">
+            <div class="flex items-center gap-1.5">
+              <span class="w-2.5 h-2.5 rounded-full bg-zinc-800"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-zinc-800"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-zinc-800"></span>
+            </div>
+            <span>~/.gitconfig</span>
+          </div>
+
+          <pre class="p-4 overflow-x-auto text-sm font-mono text-zinc-300 leading-relaxed scrollbar-thin">
+<code>
+[user]
+  email = johndoe@email.com
+  name = JohnDoe
+[core]
+  editor = code
+</code>
+          </pre>
+        </div>
+
+        <p>A adição da flag "--wait" no comando visa sinalizar que o editor (VSCode) deve aguardar pelo carregamento completo do arquivo de configuração, assim prevenindo uma tela vazia. Veja abaixo e edite sua config de acordo.</p>
+
+        <blockquote
+          class="bg-zinc-900 border-l-4 border-emerald-500 rounded-r-lg p-4 my-6 text-zinc-400 text-sm md:text-base italic">
+          editor = code --wait
+        </blockquote>
+
+        <p>O próximo passo é criar um bloco "[alias]", dentro dele colocaremos todas as instruções associadas a um atalho. Então podemos definir o caracter "c" recebendo os comandos que deseja executar. Veja o exemplo a seguir:</p>
+
+        <div class="my-6 bg-zinc-950 rounded-xl border border-zinc-800/80 overflow-hidden shadow-inner">
+          <div
+            class="flex items-center justify-between px-4 py-2.5 bg-zinc-900 border-b border-zinc-800 text-xs text-zinc-500 font-mono select-none">
+            <div class="flex items-center gap-1.5">
+              <span class="w-2.5 h-2.5 rounded-full bg-zinc-800"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-zinc-800"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-zinc-800"></span>
+            </div>
+            <span>~/.gitconfig</span>
+          </div>
+
+          <pre class="p-4 overflow-x-auto text-sm font-mono text-zinc-300 leading-relaxed scrollbar-thin">
+<code>
+...
+[alias]
+  c = !git add -- all && git commit -m 
+</code>
+          </pre>
+        </div>
+
+        <p>Quando for realizar um commit, basta utilizar <strong>git c "sua mensagem"</strong>, e automaticamente todos os arquivos em backstage serão adicionados com a respectiva mensagem, agora pode "empurrar" para o seu repositório. A partir de agora, todos os valores declarados seguiram o mesmo estilo.</p>
+
+        <p>O próximo visa exibir o status das suas modificações (arquivos), costumeiramente utilizamos o <strong>"git status"</strong>, agora iremos usar <strong>"git s"</strong>. Precisamos então declarar a seguinte linha:</p>
+
+        <blockquote
+          class="bg-zinc-900 border-l-4 border-emerald-500 rounded-r-lg p-4 my-6 text-zinc-400 text-sm md:text-base italic">
+          s = !git status -s
+        </blockquote>
+
+        <p>A adição da flag <strong>"-s"</strong> serve para exibir um status resumido (short), algo curto, abreviado.</p>
+
+        <p>O próximo comando visa exibir uma lista dos commits realizados. Geralmente, para este caso, utilizamos o <strong>"git log"</strong>, porém é visto um acúmulo de informação exagerada e desorganizada. Adicione o comando a seguir no bloco de "alias", após os comandos que já trabalhamos.</p>
+
+        <blockquote
+          class="bg-zinc-900 border-l-4 border-emerald-500 rounded-r-lg p-4 my-6 text-zinc-400 text-sm md:text-base italic">
+          l = !git log --pretty=format:''
+        </blockquote>
+
+        <p>Observe que adicionamos a cláusula <strong>--pretty=format:''</strong>, assim podemos estilizar o log com cores, exibindo cada informação como hash do commit, branch, mensagem com uma cor única. Isto simplifica a leitura, pois sabemos aonde devemos olhar de acordo com a cor definida. Agora vamos definir as cores para cada valor. Veja o código a seguir:</p>
+
+        <blockquote
+          class="bg-zinc-900 border-l-4 border-emerald-500 rounded-r-lg p-4 my-6 text-zinc-400 text-sm md:text-base italic">
+          l = !git log --pretty=format:'%h %d %s %cn %cr'
+        </blockquote>
+
+        <p>O <strong>"%h"</strong> serve para obter o hash do commit, iniciado como: "<strong class="text-red-400">476809a</strong>", servindo de maneira reduzida. Se optarmos pelo hash completo, podemos utilizar <strong>"%H"</strong>. O <strong>"%d"</strong> serve para exibir a branch do commit. O <strong>"%s"</strong> serve para obter o texto (mensagem) do commit. O <strong>"%cn"</strong> serve para exibir o nome da pessoa que realizou o commit. O <strong>"%cr"</strong> serve para exibir a data relativa, de quando foi realizado.</p>
+
+        <p>Agora que obtemos todos os valores, iremos customizar aplicando cores diferente para cada um. Observe que o exemplo a seguir estabelece um novo tipo, declarado como <strong>"%C(blue)"</strong> antes do valor pretendido que queremos que tenha essa cor. Se quiser alterar, basta mudar o valor interno dos parênteses.</p>
+
+        <blockquote
+          class="bg-zinc-900 border-l-4 border-emerald-500 rounded-r-lg p-4 my-6 text-zinc-400 text-sm md:text-base italic">
+          l = !git log  --pretty=format:'%C(blue)%h%C(red)%d %C(white)%s - %C(cyan)%cn, %C(green)%cr\n'
+        </blockquote>
+
+        <p>Se você deseja trabalhar ou já utiliza tags, use o comando abaixo para lhe auxiliar, assim terá um atalho eficiente para a geração.</p>
+
+        <blockquote
+          class="bg-zinc-900 border-l-4 border-emerald-500 rounded-r-lg p-4 my-6 text-zinc-400 text-sm md:text-base italic">
+          t = !sh -C 'git tag -a $1 -m $1' -
+        </blockquote>
+
+        <p>Por último, mas não menos importante... para simplificar suas alterações, podemos utilizar o <strong>amend</strong>. Imagine que fez alterações em alguns arquivos, corrigindo uma funcionalidade e realizou o commit, porém notou que faltou algumas coisas, em vez de commitar novamente, podemos apenas somar essas alterações ao commit que fizemos sem precisar mexer em mensagem, etc.</p>
+
+        <blockquote
+          class="bg-zinc-900 border-l-4 border-emerald-500 rounded-r-lg p-4 my-6 text-zinc-400 text-sm md:text-base italic">
+          amend = !git add --all && !git commit --amend --no-editor
+        </blockquote>
+
+        <p>Um ponto importante e vale a atenção, devemos informar para o git que queremos commitar com as tags criadas. Por padrão, essa funcionalidade vem desabilitada.</p>
+
+        <div class="my-6 bg-zinc-950 rounded-xl border border-zinc-800/80 overflow-hidden shadow-inner">
+          <div
+            class="flex items-center justify-between px-4 py-2.5 bg-zinc-900 border-b border-zinc-800 text-xs text-zinc-500 font-mono select-none">
+            <div class="flex items-center gap-1.5">
+              <span class="w-2.5 h-2.5 rounded-full bg-zinc-800"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-zinc-800"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-zinc-800"></span>
+            </div>
+            <span>~/.gitconfig</span>
+          </div>
+
+          <pre class="p-4 overflow-x-auto text-sm font-mono text-zinc-300 leading-relaxed scrollbar-thin">
+<code>
+...
+[push]
+	followTags = true
+</code>
+          </pre>
+        </div>
+
+        <p>Obrigado por ler! Abaixo você encontra o código completo.</p>
+
+        <div class="my-6 bg-zinc-950 rounded-xl border border-zinc-800/80 overflow-hidden shadow-inner">
+          <div
+            class="flex items-center justify-between px-4 py-2.5 bg-zinc-900 border-b border-zinc-800 text-xs text-zinc-500 font-mono select-none">
+            <div class="flex items-center gap-1.5">
+              <span class="w-2.5 h-2.5 rounded-full bg-zinc-800"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-zinc-800"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-zinc-800"></span>
+            </div>
+            <span>~/.gitconfig</span>
+          </div>
+
+          <pre class="p-4 overflow-x-auto text-sm font-mono text-zinc-300 leading-relaxed scrollbar-thin">
+<code>
+...
+[core]
+	editor = code --wait
+[alias]
+	c = !git add --all && git commit -m
+	s = !git status -s
+	l = !git log  --pretty=format:'%C(blue)%h%C(red)%d %C(white)%s - %C(cyan)%cn, %C(green)%cr\n'
+	t = !sh -C 'git tag -a $1 -m $1' -
+	amend = !git add --all && !git commit --amend --no-editor
+[push]
+	followTags = true
+</code>
+          </pre>
+        </div>
+
+        <p>
+          Lembre-se o quanto é delicioso estar aprendendo e saber que poderá
+          continuar até o último dia de sua vida.
+        </p>
+
+        <div class="mt-12 p-6 bg-zinc-900/50 rounded-xl border border-zinc-800">
+          <h3 class="text-sm font-semibold uppercase tracking-wider text-zinc-400 mb-2">
+            Gostou da leitura?
+          </h3>
+          <p class="text-sm text-zinc-400">
+            Acompanhe meus próximos laboratórios de código e anotações de
+            arquitetura na aba de
+            <a href="../articles.html" class="text-blue-400 hover:underline">Artigos</a>.
+          </p>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="flex items-center justify-between px-4 md:px-8 w-full py-4 bg-black shadow-sm border-t border-zinc-900">
+    <span class="text-xs text-zinc-400">
+      Desenvolvido com amor por
+      <a href="https://www.github.com/henrry-maximo" target="_blank"
+        class="text-zinc-600 hover:text-emerald-400 transition-colors">Henrique Maximo</a>
+    </span>
+
+    <span class="text-xs text-zinc-600">MAXML, 2026</span>
+  </footer>
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  toggle.addEventListener('click', () => menu.classList.toggle('hidden'));
+</script>
+</body>
+
+</html>

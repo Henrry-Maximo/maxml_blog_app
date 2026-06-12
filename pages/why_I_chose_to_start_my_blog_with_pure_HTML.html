@@ -11,41 +11,39 @@
     <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
   </head>
   <body
-    class="flex flex-col bg-slate-100 flex items-center justify-center min-h-screen text-white"
+    class="flex flex-col bg-black min-h-screen text-white"
   >
     <header
-      class="flex items-center justify-between px-4 h-16 w-full bg-black text-white shadow-sm md:px-24 md:h-24 border-b-2 border-gray-900"
+      class="flex items-center justify-between px-4 h-16 w-full bg-black text-white shadow-sm md:px-12 md:h-20 border-b border-zinc-900 sticky top-0 z-50"
     >
       <div class="flex gap-2 items-center justify-center">
-        <img src="../assets/logo.png" alt="logo da MAXML" class="h-16 w-16" />
+        <img src="../assets/logo.png" alt="logo da MAXML" class="h-10 w-10 md:h-14 md:w-14" />
         <div>
-          <h1 class="text-lg font-bold tracking-wide text-white">
-            MA<span class="text-blue-400/90"
-              >X<span class="text-white">M</span>L</span
-            >
+          <h1 class="text-base md:text-lg font-bold tracking-wide text-white">
+            MA<span class="text-blue-400/90">X<span class="text-white">M</span>L</span>
           </h1>
           <h2 class="text-xs text-zinc-300">Blog de Estudos</h2>
         </div>
       </div>
 
-      <nav class="flex items-center gap-6">
-        <a
-          href="../index.html"
-          class="flex items-center gap-1.5 text-sm font-medium text-zinc-300 hover:text-blue-600 transition-colors"
-          >Home</a
-        >
-        <a
-          href="../articles.html"
-          class="flex items-center gap-1.5 text-sm font-medium text-blue-400 transition-colors"
-          >Artigos</a
-        >
-        <a
-          href="../about.html"
-          class="flex items-center gap-1.5 text-sm font-medium text-zinc-300 hover:text-blue-600 transition-colors"
-          >Sobre</a
-        >
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="../index.html" class="text-sm font-medium text-zinc-300 hover:text-blue-400 transition-colors">Home</a>
+        <a href="../articles.html" class="text-sm font-medium text-blue-400 transition-colors">Artigos</a>
+        <a href="../about.html" class="text-sm font-medium text-zinc-300 hover:text-blue-400 transition-colors">Sobre</a>
       </nav>
+
+      <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Menu">
+        <span class="block w-5 h-0.5 bg-zinc-300"></span>
+        <span class="block w-5 h-0.5 bg-zinc-300"></span>
+        <span class="block w-5 h-0.5 bg-zinc-300"></span>
+      </button>
     </header>
+
+    <div id="mobile-menu" class="hidden bg-zinc-950 border-b border-zinc-900 px-4 py-4 flex flex-col gap-4 md:hidden">
+      <a href="../index.html" class="text-sm font-medium text-zinc-300 hover:text-blue-400 transition-colors">Home</a>
+      <a href="../articles.html" class="text-sm font-medium text-blue-400 transition-colors">Artigos</a>
+      <a href="../about.html" class="text-sm font-medium text-zinc-300 hover:text-blue-400 transition-colors">Sobre</a>
+    </div>
 
     <main class="bg-black w-full flex-1 px-4 py-12 md:px-8">
       <div class="max-w-3xl mx-auto">
@@ -75,7 +73,7 @@
           </p>
         </header>
 
-        <article class="text-zinc-300 space-y-6 text-base md:text-lg leading-relaxed font-normal">
+        <article class="text-zinc-300 space-y-6 text-sm md:text-base leading-relaxed font-normal">
           <p>
             Como desenvolvedores, temos uma mania quase incontrolável de complicar as coisas. Antes mesmo de escrever a primeira linha de conteúdo de um projeto pessoal, nossa mente é inundada por decisões arquiteturais: <em>"Devo usar Next.js ou Nuxt?", "Qual CMS headless vai gerenciar meus posts?", "Como estruturar os Server Components?"</em>.
           </p>
@@ -115,7 +113,7 @@
           <div class="mt-12 p-6 bg-zinc-900/50 rounded-xl border border-zinc-800">
             <h3 class="text-sm font-semibold uppercase tracking-wider text-zinc-400 mb-2">Gostou da leitura?</h3>
             <p class="text-sm text-zinc-400">
-              Acompanhe meus próximos laboratórios de código e anotações de arquitetura na aba de <a href="articles.html" class="text-blue-400 hover:underline">Artigos</a>.
+              Acompanhe meus próximos laboratórios de código e anotações de arquitetura na aba de <a href="../articles.html" class="text-blue-400 hover:underline">Artigos</a>.
             </p>
           </div>
         </article>
@@ -124,7 +122,7 @@
     </main>
 
     <footer
-      class="flex items-center justify-between px-8 w-full py-4 bg-black shadow-sm border-t border-gray-900"
+      class="flex items-center justify-between px-4 md:px-8 w-full py-4 bg-black shadow-sm border-t border-zinc-900"
     >
       <span class="text-xs text-zinc-400">
         Desenvolvido com amor por
@@ -139,4 +137,9 @@
       <span class="text-xs text-zinc-600">MAXML, 2026</span>
     </footer>
   </body>
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  toggle.addEventListener('click', () => menu.classList.toggle('hidden'));
+</script>
 </html>
