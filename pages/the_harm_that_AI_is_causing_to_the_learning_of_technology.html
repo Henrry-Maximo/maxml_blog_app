@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>
+      O prejuízo que a IA está causando no aprendizado dos estudantes de
+      tecnologia | Blog MAXML
+    </title>
+
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+  </head>
+
+  <body class="flex flex-col bg-black min-h-screen text-white">
+    <header
+      class="flex items-center justify-between px-4 h-16 w-full bg-black text-white shadow-sm md:px-12 md:h-20 border-b border-zinc-900 sticky top-0 z-50"
+    >
+      <div class="flex gap-2 items-center justify-center">
+        <img
+          src="../assets/logo.png"
+          alt="logo da MAXML"
+          class="h-10 w-10 md:h-14 md:w-14"
+        />
+        <div>
+          <h1 class="text-base md:text-lg font-bold tracking-wide text-white">
+            MA<span class="text-blue-400/90"
+              >X<span class="text-white">M</span>L</span
+            >
+          </h1>
+          <h2 class="text-xs text-zinc-300">Blog de Estudos</h2>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-6">
+        <a
+          href="../index.html"
+          class="text-sm font-medium text-zinc-300 hover:text-blue-400 transition-colors"
+          >Home</a
+        >
+        <a
+          href="../articles.html"
+          class="text-sm font-medium text-blue-400 transition-colors"
+          >Artigos</a
+        >
+        <a
+          href="../about.html"
+          class="text-sm font-medium text-zinc-300 hover:text-blue-400 transition-colors"
+          >Sobre</a
+        >
+      </nav>
+
+      <button
+        id="menu-toggle"
+        class="md:hidden flex flex-col gap-1.5 p-2"
+        aria-label="Menu"
+      >
+        <span class="block w-5 h-0.5 bg-zinc-300"></span>
+        <span class="block w-5 h-0.5 bg-zinc-300"></span>
+        <span class="block w-5 h-0.5 bg-zinc-300"></span>
+      </button>
+    </header>
+
+    <div
+      id="mobile-menu"
+      class="hidden bg-zinc-950 border-b border-zinc-900 px-4 py-4 flex flex-col gap-4 md:hidden"
+    >
+      <a
+        href="../index.html"
+        class="text-sm font-medium text-zinc-300 hover:text-blue-400 transition-colors"
+        >Home</a
+      >
+      <a
+        href="../articles.html"
+        class="text-sm font-medium text-blue-400 transition-colors"
+        >Artigos</a
+      >
+      <a
+        href="../about.html"
+        class="text-sm font-medium text-zinc-300 hover:text-blue-400 transition-colors"
+        >Sobre</a
+      >
+    </div>
+
+    <main class="bg-black w-full flex-1 px-4 py-12 md:px-8">
+      <div class="max-w-3xl mx-auto">
+        <div class="mb-8">
+          <a
+            href="../articles.html"
+            class="inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-emerald-400 transition-colors group"
+          >
+            <i
+              class="ph-light ph-arrow-left transition-transform group-hover:-translate-x-1"
+            ></i>
+            Voltar para artigos
+          </a>
+        </div>
+
+        <header class="mb-8 border-b border-zinc-800 pb-8">
+          <div
+            class="flex gap-2 items-center text-xs font-semibold text-rose-400 mb-3"
+          >
+            <span
+              class="bg-rose-950/50 px-2 py-0.5 rounded-sm border border-rose-900/30"
+              >Opinião</span
+            >
+            <span class="text-zinc-500 font-normal">13 Jun 2026</span>
+            <span class="text-zinc-600">•</span>
+            <span class="text-zinc-500 font-normal flex items-center gap-1">
+              <i class="ph-light ph-clock"></i>8 min de leitura
+            </span>
+          </div>
+
+          <h1
+            class="text-3xl font-extrabold tracking-tight text-white md:text-4xl leading-tight"
+          >
+            O prejuízo que a IA está causando no aprendizado dos estudantes de
+            tecnologia
+          </h1>
+
+          <p class="mt-4 text-lg text-zinc-400 leading-relaxed font-light">
+            A fábrica de gênios, os impostores e a mentalidade do "ganha o mais
+            esperto"
+          </p>
+        </header>
+
+        <article
+          class="text-zinc-300 space-y-6 text-sm md:text-base leading-relaxed font-normal"
+        >
+          <p>
+            O sonho de todo estudante é entrar em uma boa faculdade. Um
+            estudante que entende o quanto o conhecimento é valioso e
+            importante, não porque pensa que poderá ficar rico, mas porque o
+            estudo parece lhe complementar como indivíduo. Não digo em um
+            sentido social, essa não é a intenção. Considere isto como um
+            indivíduo introspectivo, que compreende a necessidade de estabelecer
+            o autoconhecimento. A faculdade, a fábrica de gênios — chamada assim
+            por mim, sempre foi um local onde alunos iam para aprender conceitos
+            que poderiam, eventualmente, serem vendidos para as empresas. Creio
+            ser a intenção principal de qualquer universitário. De 2022 até
+            2026, obtivemos avanços extraordinários com o uso de
+            <strong>Inteligência Artificial</strong>. Sendo que agora todos
+            possuímos acesso instantâneo a uma ferramenta de IA, seja ela
+            Gemini, ChatGPT, DeepSeek, etc. Basta apenas ter um celular, acessar
+            a loja de aplicativos e obter a IA desejada. Simples assim! O
+            problema é como as pessoas, e neste caso específico, os estudantes
+            fazem uso.
+          </p>
+
+          <p>
+            O sintoma disso é visto em alunos que descaradamente se vangloriam
+            quando recebem uma tarefa e utilizam de IA para elaborá-la, de forma
+            que quando vão apresentar ou entregar, aguardam ansiosamente pela
+            nota, que posteriormente, será 10. Eu já vi isto acontecendo, e sei
+            que você também.
+            <strong
+              >O problema não é usar IA. O problema é terceirizar o esforço
+              cognitivo.</strong
+            >
+            É claro que antigamente já havia esses comportamentos de má fé,
+            porém não em tanta abundância. A IA revelou quem realmente quer
+            aprender e quem só quer a nota. Para mim, estando matriculado no
+            curso de <em>Sistemas para Internet</em>, reconheci esse
+            comportamento em meus colegas, e sinceramente, fiquei decepcionado.
+            Não se pode confiar em pessoas que negligenciam o próprio
+            aprendizado.
+          </p>
+
+          <blockquote
+            class="bg-zinc-900 border-l-4 border-emerald-500 rounded-r-lg p-4 my-6 text-zinc-400 text-sm md:text-base italic"
+          >
+            O conhecimento precisa ser conquistado!
+          </blockquote>
+
+          <p>
+            Eu me perguntei durante muito tempo como pessoas assim são tão
+            tranquilas com a vida, e aceitam simplesmente não entender como as
+            coisas funcionam. Elas simplesmente aceitam. Não questionam. Ou
+            seja, utilizam uma ferramenta, conseguem todo o processo junto do
+            resultado, e expõem ao mundo como se o conteúdo tivesse sido
+            produzido por elas.
+            <em
+              >"Isto é ser um estudante?", "Por que estamos em um curso?", "Por
+              que estamos em uma faculdade?", "A intenção de um projeto não era
+              fazer o indivíduo aprender?", "Por que pessoas assim abrem um
+              sorriso quando veem a nota que o professor deu?", "Por que pagar
+              uma mensalidade se não irá aprender?"</em
+            >.
+          </p>
+
+          <h2
+            class="text-xl font-bold text-white pt-4 tracking-tight flex items-center gap-2 md:text-2xl"
+          >
+            <span class="text-emerald-400">#</span> 1. Questionamentos
+          </h2>
+
+          <p>
+            A fragilidade da atualidade está em
+            <strong>evidência explícita</strong> quando observamos as atitudes
+            desta geração. Está claro que poucas pessoas, de fato, possuem um
+            interesse genuíno e desbravador. E lhe garanto, é difícil encontrar
+            pessoas assim. Consigo contar nos dedos as pessoas que realmente
+            sabem o que dizem. As que fingem saber, sempre seguem um padrão de
+            comportamento, elas precisam de validação e o tempo todo querem
+            expor a "inteligência" que possuem, dizendo coisas óbvias e se
+            vangloriam por isso. É um insulto direto para os estudantes que
+            realmente se esforçam e dedicam parte de sua vida ao mundo
+            acadêmico. Uma vida com agenda definida, horários estipulados,
+            livros, exercícios, análises, projetos e mais horas e horas de
+            conteúdo, sempre consumindo um bom café pra ajudar. Essa tem sido
+            minha rotina atualmente, e faço tudo com muito orgulho. Se ainda
+            estiver lendo esse artigo, então você é parecido comigo. Aceita um
+            aperto de mão?
+          </p>
+
+          <p>
+            Não há nada que podemos fazer, pois impostores sempre existiram e
+            estarão em busca de pessoas que vá os adorarem pelas mentiras que
+            contam friamente, transformando-as em verdades com um belo sorriso
+            no rosto. Mas, <strong>sem sombra de dúvida</strong>, essa pessoa
+            sempre viverá com uma pulga atrás da orelha, pois a qualquer
+            momento, a máscara pode cair, revelando sua verdadeira face. Como se
+            houvesse uma tatuagem em sua testa, sinalizando o quanto é falso. Ou
+            seja, o futuro é promissor e se encarregar de resolver o problema.
+          </p>
+
+          <h2
+            class="text-xl font-bold text-white pt-4 tracking-tight flex items-center gap-2 md:text-2xl"
+          >
+            <span class="text-emerald-400">#</span> 2. O único
+          </h2>
+
+          <p>
+            Não podemos nos enganar, estamos cercados por
+            <strong>idiotas</strong>. Na maior parte do tempo, tentamos pensar
+            de maneira otimista. Eu mesmo faço isso! Acreditando piamente em
+            pessoas que não possuem honra e caráter para estarem ao meu lado. Eu
+            penso:
+            <em
+              >"desta vez será diferente!", "a percepção mudou, dará tudo
+              certo!"</em
+            >. Enfim, apenas pensamentos que foram diluídos até não existirem
+            mais após repetidas e repetidas atitudes de pessoas que me cercam.
+            <strong>Creio ter acreditado nas pessoas erradas.</strong> É parte
+            da vida se decepcionar com relacionamentos.
+          </p>
+
+          <p>
+            Sejamos sinceros, no momento atual, encontrar pessoas como eu e você
+            é algo <strong>extremamente raro</strong>. Pessoas que de fato, se
+            intriguem pelo assunto e destrincham de cabo a rabo. Não são todos
+            que estão dispostos a fazer isto.
+          </p>
+
+          <p>
+            Lembre-se o quanto é <em>delicioso estar aprendendo</em> e saber que
+            poderá continuar até o <strong>último dia de sua vida</strong>. O
+            idiota sempre dirá, em meio a uma situação de vulnerabilidade
+            <em> "Agora as coisas são assim. Demorou pra aprender, hein." </em>
+            Apenas concorde e siga o seu caminho, o destino se encarregará da
+            resolução.
+          </p>
+
+          <blockquote
+            class="bg-zinc-900 border-l-4 border-emerald-500 rounded-r-lg p-4 my-6 text-zinc-400 text-sm md:text-base italic"
+          >
+            Quando eu comecei não foi porque eu queria mudar o mundo, eu fiz
+            porque estava interessado em computadores. Meu conselho, de certa
+            forma, poderia ser para que se tente encontrar algo que esteja
+            realmente interessado. Você terá que fazer isso constantemente por
+            muitos anos, seja um esporte, mexer em computadores, música,
+            qualquer coisa. Você vai precisar passar horas e horas todos os
+            dias, por pelo menos uns 10 anos. Se você fizer isso você será um
+            dos melhores em alguma coisa. Mas o único jeito de se conseguir
+            fazer algo por horas e horas é se você encontrar algo em que
+            realmente esteja interessado em fazer! — Linus Torvalds
+          </blockquote>
+
+          <p>Os impostores podem ter dezenas de motivos para fazer o que
+            fazem, mas o único que sei que não <strong>terão</strong> será o <em>interesse genuíno
+            pela área da tecnologia</em>.
+          </p>
+
+          <div
+            class="mt-12 p-6 bg-zinc-900/50 rounded-xl border border-zinc-800"
+          >
+            <h3
+              class="text-sm font-semibold uppercase tracking-wider text-zinc-400 mb-2"
+            >
+              Gostou da leitura?
+            </h3>
+            <p class="text-sm text-zinc-400">
+              Acompanhe meus próximos laboratórios de código e anotações de
+              arquitetura na aba de
+              <a href="../articles.html" class="text-blue-400 hover:underline"
+                >Artigos</a
+              >.
+            </p>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <footer
+      class="flex items-center justify-between px-4 md:px-8 w-full py-4 bg-black shadow-sm border-t border-zinc-900"
+    >
+      <span class="text-xs text-zinc-400">
+        Desenvolvido com amor por
+        <a
+          href="https://www.github.com/henrry-maximo"
+          target="_blank"
+          class="text-zinc-600 hover:text-emerald-400 transition-colors"
+          >Henrique Maximo</a
+        >
+      </span>
+
+      <span class="text-xs text-zinc-600">MAXML, 2026</span>
+    </footer>
+    <script>
+      const toggle = document.getElementById("menu-toggle");
+      const menu = document.getElementById("mobile-menu");
+      toggle.addEventListener("click", () => menu.classList.toggle("hidden"));
+    </script>
+  </body>
+</html>

@@ -57,7 +57,7 @@
       <header class="mb-8 border-b border-zinc-800 pb-8">
         <div class="flex gap-2 items-center text-xs font-semibold text-emerald-400 mb-3">
           <span class="bg-emerald-950/50 px-2 py-0.5 rounded-sm border border-emerald-900/30">Projetos</span>
-          <span class="text-zinc-500 font-normal">05 Jun 2026</span>
+          <span class="text-zinc-500 font-normal">10 Jun 2026</span>
           <span class="text-zinc-600">•</span>
           <span class="text-zinc-500 font-normal flex items-center gap-1">
             <i class="ph-light ph-clock"></i> 10 min de leitura
@@ -79,20 +79,19 @@
           Sempre que pensamos em agilidade e rapidez no fluxo de
           desenvolvimento, optamos por utilizar ferramentas que possuem
           diversas abstrações, sendo o objetivo principal não perder tempo com
-          funcionalidades que não envolvam a regra de negócio. Ou seja,
+          funcionalidades que não envolvam a <strong>regra de negócio</strong>. Ou seja,
           <em>"Por que reinventar a roda se simplesmente podemos utilizá-la?",
-            "Por que criar método de autenticação do zero", "Por que
-            implementar rotas manual sendo que o framework da moda já
+            "Por que criar método de autenticação do zero?", "Por que
+            implementar rotas manualmente sendo que o framework da moda já
             faz?"</em>.
         </p>
 
         <p>
           Esses questionamentos são pertinentes e não estão errados, porém
-          demonstra um ponto crítico.<strong class="text-white"></strong>
-          Como podemos evoluir a tecnologia se não sabemos como funciona por
-          debaixo dos panos? </strong>Me questiono periodicamente sobre isto, pois vejo pessoas
+          demonstram um ponto crítico. <strong>Como podemos evoluir a tecnologia se não sabemos como funciona por
+          debaixo dos panos?</strong> Me questiono periodicamente sobre isto, pois vejo pessoas
           acreditando piamente que não precisam estudar ou entender a
-          abstração, elas só precisam usar, simples assim. Sabe?... eu penso
+          abstração, elas só precisam usar, <em>simples assim</em>. Sabe?... eu penso
           seriamente que para as coisas evoluírem, elas precisam ser
           <strong>dissecadas</strong>, <strong>manipuladas</strong> e
           <strong>observadas</strong> milimetricamente.
@@ -103,12 +102,12 @@
         </h2>
         <p>
           O objetivo principal de minha análise é simples...
-          <strong>estudar o cór, as entrelinhas para obter as nuances</strong>. Se você é como eu, não aceita não
+          <strong>estudar o cerne, as entrelinhas para obter as nuances</strong>. Se você é como eu, não aceita não
           entender, queremos o máximo do
-          conhecimento, queremos destrinchar profundamente o tema. "O que nós
-          move?", você pode perguntar?... Eu lhe respondo: simplesmente
+          conhecimento, queremos <em>destrinchar</em> profundamente o tema. <em>"O que nos
+          move?"</em>, você pode perguntar?... Eu lhe respondo: simplesmente
           fazemos com afinco porque gostamos. A tecnologia, o mercado, o
-          cenário atual... todos eles precisam da gente.
+          cenário atual... <strong>todos eles precisam da gente</strong>.
         </p>
 
         <h2 class="text-xl font-bold text-white pt-4 tracking-tight flex items-center gap-2 md:text-2xl">
@@ -117,13 +116,13 @@
         </h2>
         <p>
           O comando a seguir visa abrir o arquivo de configuração do GIT, por
-          isso passamos a flag "edit", já "global" indica que iremos aplicar
-          para qualquer projeto pertencente ao usuário logado. O GIT possuí
-          três modalidades: global, local e system. O "local" serve para o
+          isso passamos a flag <strong>"--edit"</strong>, já <strong>"--global"</strong> indica que iremos aplicar
+          para qualquer projeto pertencente ao usuário logado. O GIT possui
+          três modalidades: <strong>global</strong>, <strong>local</strong> e <strong>system</strong>. O <em>"local"</em> serve para o
           projeto aberto no momento, então recomendo que utilize o terminal do
-          VSCode para configurar. O system serve para todos os usuários do
+          VSCode para configurar. O <em>"system"</em> serve para todos os usuários do
           sistema. Pense que nem todos da sua equipe querem utilizar os mesmos
-          atalhos que você. Aqui utilizaremos o "global". Digite o comando a
+          atalhos que você. Aqui utilizaremos o <strong>"global"</strong>. Digite o comando a
           seguir em seu terminal.
         </p>
 
@@ -133,8 +132,8 @@
         </blockquote>
 
         <p>
-          O terminal mostrará o editor Vim, então pressione a tecla dois
-          pontos e solte, e em seguida coloque a letra "q". O comando irá
+          O terminal mostrará o editor <strong>Vim</strong>, então pressione a tecla <strong>dois
+          pontos</strong> e solte, e em seguida coloque a letra <strong>"q"</strong>. O comando irá
           fechar o editor.
         </p>
 
@@ -144,8 +143,8 @@
         </blockquote>
 
         <p>
-          Para abrir o arquivo de configurações com o VSCode, utilize o
-          comando abaixo. Ele edita diretamente o arquivo do git, trocando o editor. Em seguida, use o comando
+          Para abrir o arquivo de configurações com o <strong>VSCode</strong>, utilize o
+          comando abaixo. Ele edita diretamente o arquivo do git, <em>trocando o editor</em>. Em seguida, use o comando
           novamente.
         </p>
 
@@ -183,14 +182,14 @@
           </pre>
         </div>
 
-        <p>A adição da flag "--wait" no comando visa sinalizar que o editor (VSCode) deve aguardar pelo carregamento completo do arquivo de configuração, assim prevenindo uma tela vazia. Veja abaixo e edite sua config de acordo.</p>
+        <p>A adição da flag <strong>"--wait"</strong> no comando visa sinalizar que o editor (VSCode) deve aguardar pelo carregamento completo do arquivo de configuração, assim <em>prevenindo uma tela vazia</em>. Veja abaixo e edite sua config de acordo.</p>
 
         <blockquote
           class="bg-zinc-900 border-l-4 border-emerald-500 rounded-r-lg p-4 my-6 text-zinc-400 text-sm md:text-base italic">
           editor = code --wait
         </blockquote>
 
-        <p>O próximo passo é criar um bloco "[alias]", dentro dele colocaremos todas as instruções associadas a um atalho. Então podemos definir o caracter "c" recebendo os comandos que deseja executar. Veja o exemplo a seguir:</p>
+        <p>O próximo passo é criar um bloco <strong>"[alias]"</strong>, dentro dele colocaremos todas as instruções associadas a um atalho. Então podemos definir o caractere <strong>"c"</strong> recebendo os comandos que deseja executar. Veja o exemplo a seguir:</p>
 
         <div class="my-6 bg-zinc-950 rounded-xl border border-zinc-800/80 overflow-hidden shadow-inner">
           <div
@@ -212,7 +211,7 @@
           </pre>
         </div>
 
-        <p>Quando for realizar um commit, basta utilizar <strong>git c "sua mensagem"</strong>, e automaticamente todos os arquivos em backstage serão adicionados com a respectiva mensagem, agora pode "empurrar" para o seu repositório. A partir de agora, todos os valores declarados seguiram o mesmo estilo.</p>
+        <p>Quando for realizar um commit, basta utilizar <strong>git c "sua mensagem"</strong>, e automaticamente todos os arquivos em <em>staging</em> serão adicionados com a respectiva mensagem, agora pode "empurrar" para o seu repositório. A partir de agora, todos os valores declarados seguirão o mesmo estilo.</p>
 
         <p>O próximo visa exibir o status das suas modificações (arquivos), costumeiramente utilizamos o <strong>"git status"</strong>, agora iremos usar <strong>"git s"</strong>. Precisamos então declarar a seguinte linha:</p>
 
@@ -223,14 +222,14 @@
 
         <p>A adição da flag <strong>"-s"</strong> serve para exibir um status resumido (short), algo curto, abreviado.</p>
 
-        <p>O próximo comando visa exibir uma lista dos commits realizados. Geralmente, para este caso, utilizamos o <strong>"git log"</strong>, porém é visto um acúmulo de informação exagerada e desorganizada. Adicione o comando a seguir no bloco de "alias", após os comandos que já trabalhamos.</p>
+        <p>O próximo comando visa exibir uma lista dos commits realizados. Geralmente, para este caso, utilizamos o <strong>"git log"</strong>, porém é visto um acúmulo de informação <em>exagerada e desorganizada</em>. Adicione o comando a seguir no bloco de <strong>"alias"</strong>, após os comandos que já trabalhamos.</p>
 
         <blockquote
           class="bg-zinc-900 border-l-4 border-emerald-500 rounded-r-lg p-4 my-6 text-zinc-400 text-sm md:text-base italic">
           l = !git log --pretty=format:''
         </blockquote>
 
-        <p>Observe que adicionamos a cláusula <strong>--pretty=format:''</strong>, assim podemos estilizar o log com cores, exibindo cada informação como hash do commit, branch, mensagem com uma cor única. Isto simplifica a leitura, pois sabemos aonde devemos olhar de acordo com a cor definida. Agora vamos definir as cores para cada valor. Veja o código a seguir:</p>
+        <p>Observe que adicionamos a cláusula <strong>--pretty=format:''</strong>, assim podemos estilizar o log com cores, exibindo cada informação — como <em>hash do commit</em>, <em>branch</em>, <em>mensagem</em> — com uma cor única. Isto simplifica a leitura, pois sabemos onde devemos olhar de acordo com a cor definida. Agora vamos definir as cores para cada valor. Veja o código a seguir:</p>
 
         <blockquote
           class="bg-zinc-900 border-l-4 border-emerald-500 rounded-r-lg p-4 my-6 text-zinc-400 text-sm md:text-base italic">
@@ -239,28 +238,28 @@
 
         <p>O <strong>"%h"</strong> serve para obter o hash do commit, iniciado como: "<strong class="text-red-400">476809a</strong>", servindo de maneira reduzida. Se optarmos pelo hash completo, podemos utilizar <strong>"%H"</strong>. O <strong>"%d"</strong> serve para exibir a branch do commit. O <strong>"%s"</strong> serve para obter o texto (mensagem) do commit. O <strong>"%cn"</strong> serve para exibir o nome da pessoa que realizou o commit. O <strong>"%cr"</strong> serve para exibir a data relativa, de quando foi realizado.</p>
 
-        <p>Agora que obtemos todos os valores, iremos customizar aplicando cores diferente para cada um. Observe que o exemplo a seguir estabelece um novo tipo, declarado como <strong>"%C(blue)"</strong> antes do valor pretendido que queremos que tenha essa cor. Se quiser alterar, basta mudar o valor interno dos parênteses.</p>
+        <p>Agora que obtemos todos os valores, iremos customizar aplicando <strong>cores diferentes</strong> para cada um. Observe que o exemplo a seguir estabelece uma nova cor, declarada como <strong>"%C(blue)"</strong> antes do valor pretendido. Se quiser alterar, basta mudar o valor interno dos parênteses.</p>
 
         <blockquote
           class="bg-zinc-900 border-l-4 border-emerald-500 rounded-r-lg p-4 my-6 text-zinc-400 text-sm md:text-base italic">
           l = !git log  --pretty=format:'%C(blue)%h%C(red)%d %C(white)%s - %C(cyan)%cn, %C(green)%cr\n'
         </blockquote>
 
-        <p>Se você deseja trabalhar ou já utiliza tags, use o comando abaixo para lhe auxiliar, assim terá um atalho eficiente para a geração.</p>
+        <p>Se você deseja trabalhar ou já utiliza <strong>tags</strong>, use o comando abaixo para lhe auxiliar, assim terá um atalho eficiente para a criação delas.</p>
 
         <blockquote
           class="bg-zinc-900 border-l-4 border-emerald-500 rounded-r-lg p-4 my-6 text-zinc-400 text-sm md:text-base italic">
           t = !sh -C 'git tag -a $1 -m $1' -
         </blockquote>
 
-        <p>Por último, mas não menos importante... para simplificar suas alterações, podemos utilizar o <strong>amend</strong>. Imagine que fez alterações em alguns arquivos, corrigindo uma funcionalidade e realizou o commit, porém notou que faltou algumas coisas, em vez de commitar novamente, podemos apenas somar essas alterações ao commit que fizemos sem precisar mexer em mensagem, etc.</p>
+        <p>Por último, mas não menos importante... para simplificar suas alterações, podemos utilizar o <strong>amend</strong>. Imagine que fez alterações em alguns arquivos, corrigindo uma funcionalidade e realizou o commit, porém notou que <em>faltou incluir algumas coisas</em>. Em vez de commitar novamente, podemos apenas <strong>somar essas alterações ao commit anterior</strong> sem precisar mexer na mensagem, etc.</p>
 
         <blockquote
           class="bg-zinc-900 border-l-4 border-emerald-500 rounded-r-lg p-4 my-6 text-zinc-400 text-sm md:text-base italic">
           amend = !git add --all && !git commit --amend --no-editor
         </blockquote>
 
-        <p>Um ponto importante e vale a atenção, devemos informar para o git que queremos commitar com as tags criadas. Por padrão, essa funcionalidade vem desabilitada.</p>
+        <p>Um ponto importante que vale a atenção: devemos informar ao git que queremos commitar <strong>junto com as tags criadas</strong>. Por padrão, <em>essa funcionalidade vem desabilitada</em>.</p>
 
         <div class="my-6 bg-zinc-950 rounded-xl border border-zinc-800/80 overflow-hidden shadow-inner">
           <div
@@ -313,8 +312,8 @@
         </div>
 
         <p>
-          Lembre-se o quanto é delicioso estar aprendendo e saber que poderá
-          continuar até o último dia de sua vida.
+          Lembre-se <em>o quanto é delicioso</em> estar aprendendo e saber que poderá
+          continuar até o <strong>último dia de sua vida</strong>.
         </p>
 
         <div class="mt-12 p-6 bg-zinc-900/50 rounded-xl border border-zinc-800">
